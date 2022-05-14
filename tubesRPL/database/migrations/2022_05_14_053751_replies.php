@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tab_forums', function (Blueprint $table) {
-            $table->id('id_forum');
-            $table->string('judul_forum');
-            $table->text('isi_forum');
+        Schema::create('tab_repliess', function (Blueprint $table) {
+            $table->id('id_replies');
+            $table->text('isi_replies');
             $table->integer('id_parent');
-            $table->integer('id_replies');
+            $table->integer('id_forum');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forums');
+        //
     }
 };
