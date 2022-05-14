@@ -1,0 +1,193 @@
+body{
+  background-color: #FFD2D2;
+  margin: 0;
+}
+
+.menu-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcomeline{
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  margin-left: 100px;
+  margin-top: 50px;
+  float: left;
+}
+
+.Buna1{
+  font-family: 'Bubblegum Sans', cursive;
+  color: #EA346A;
+}
+
+.btn[name='butreg']{
+  border: none;
+  color: #fff;
+  background-color: #EA346A;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 70px;
+  cursor: pointer;
+}
+
+.btn[name='butlog']{
+  border: none;
+  color: #EA346A;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 2px;
+  cursor: pointer;
+}
+
+li {
+  float: right;
+  font-size: 15px;
+}
+
+li a {
+  display: block;
+  color: #4E4E4E;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+tr{
+  height: 350px;
+}
+
+.paraLog{
+  float: left;
+  position: relative;
+  display: inline;
+  margin-top: 200px;
+  margin-left: 125px;
+  font-family: 'Poppins', sans-serif;
+  color: #4E4E4E;
+}
+.login-to{
+  font-size: 50px;
+}
+.Buna{
+  font-family: 'Bubblegum Sans', cursive;
+  color: #EA346A;
+  font-size: 50px;
+}
+
+.belowLog{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.registerlink{
+  color: #006DFF;
+  text-decoration:none;
+}
+
+.logform{
+  float: right;
+  margin-top: 170px;
+  margin-right: 150px;
+  position: relative;
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+}
+
+.loginabove{
+  color: #4E4E4E;
+  font-size: 25px;
+}
+
+.forgotpsw{
+  color: #4E4E4E;
+  text-align: left;
+  font-size: 10px;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+input[type='text'], input[type='password'] {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #FDEFFF;
+  margin-top: 20px;
+  display: inline;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #FDEFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+input[type='submit']{
+  width: 257px;
+  height: 40px;
+  padding: 10px 25px 8px;
+  color: #fff;
+  background-color: #F05E8A;
+  border: 1px solid #F05E8A;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor:pointer;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.paraReg{
+  float: left;
+  margin-left: 125px;
+  margin-top: 200px;
+  position: relative;
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+  color: #4E4E4E;
+}
+
+.regis-to{
+  font-size: 50px;
+}
+
+.Buna1{
+  font-family: 'Bubblegum Sans', cursive;
+  color: #EA346A;
+  font-size: 50px;
+}
+
+.belowReg{
+  font-size: 20px;
+}
+
+.loginlink{
+  color: #006DFF;
+  text-decoration:none;
+}
+
+.regform{
+  float: right;
+  margin-right: 150px;
+  margin-top: 50px;
+  position: relative;
+  display: inline;
+  font-family: 'Poppins', sans-serif;
+}
+
+.regisabove{
+  font-size: 25px;
+  color: #4E4E4E;
+}
