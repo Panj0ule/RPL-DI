@@ -14,10 +14,6 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/', [KemahController::class, 'index']);
-// Route::get('/page_perkemahan', [KemahController::class, 'page_perkemahan']);
-
 Route::get('/', [AuthController::class, 'index']);
 Route::get('/login', [AuthController::class,"loginView"]);
 Route::get('/register', [AuthController::class,"registerView"]);
