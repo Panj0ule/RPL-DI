@@ -71,6 +71,7 @@
     <div class="col-xl-9 col-lg-8 col-md-12 col-12">
      <div id="earningTwo" class="apex-charts"></div>
     </div>
+    Tes Github
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
