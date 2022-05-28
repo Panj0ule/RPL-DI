@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Kemah;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -14,9 +13,23 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [AuthController::class, 'index']);
+/*
+Route::get('/', function () {
+    return view('welcome');
+});*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
 Route::get('/login', [AuthController::class,"loginView"]);
 Route::get('/register', [AuthController::class,"registerView"]);
 Route::post('/do-login', [AuthController::class,"doLogin"]);
 Route::post('/do-register', [AuthController::class,"doRegister"]);
 Route::get('/logout', [AuthController::class,"logout"]);
+Route::get('/login1', [AuthController::class,"loginView1"]);
+Route::get('/parentView', [AuthController::class,"parentView"]);
+Route::get('/forumView', [AuthController::class,"forumView"]);
+Route::get('/articleView', [AuthController::class,"articleView"]);
+
+
+

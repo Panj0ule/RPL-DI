@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -24,6 +23,21 @@ class AuthController extends Controller
         return view("register");
     }
 
+    function parentView()
+    {
+        return view("parentPage");
+    }
+
+    function forumView()
+    {
+        return view("forumPage");
+    }
+
+    function articleView()
+    {
+        return view("articlePage");
+    }
+
     function doLogin(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -38,7 +52,7 @@ class AuthController extends Controller
 
         } else {
             //validations are passed try login using laravel auth attemp
-            if (Auth::attempt($request->only(["email", "password"]))) {
+            if (\Auth::attempt($request->only(["email", "password"]))) {
                 return response()->json(["status"=>true,"redirect_location"=>url("")]);
             } else {
                 return response()->json([["Invalid credentials"]],422);
@@ -76,7 +90,7 @@ class AuthController extends Controller
     // logout method to clear the sesson of logged in user
     function logout()
     {
-        Auth::logout();
-        return redirect("")->with('success', 'Logout successfully');;
+        \Auth::logout();
+        return redirect("login")->with('success', 'Logout successfully');;
     }
 }
