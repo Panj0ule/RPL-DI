@@ -54,7 +54,7 @@ class AuthController1 extends Controller
         } else {
             //validations are passed try login using laravel auth attemp
             if (Auth::attempt($request->only(["email", "password"]))) {
-                return response()->json(["status"=>true,"redirect_location"=>url("")]);
+                return response()->json(["status"=>true,"redirect_location"=>url("parentView")]);
             } else {
                 return response()->json([["Invalid credentials"]],422);
             }
