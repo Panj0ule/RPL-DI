@@ -34,7 +34,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="/parentView">Buna</a></h1>
+        <h1><a href="/parentView">BUNA</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -42,7 +42,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto" href="#">Notifikasi</a></li>
-          <li><a class="nav-link scrollto" href="#">Notes</a></li>
+          <li><a class="nav-link scrollto" href="/notesView">Notes</a></li>
           <li><a class="nav-link scrollto" href="/forumView">Forum</a></li>
           <li><a class="nav-link scrollto" href="/articleView">Informasi</a></li>
           <li><a class="nav-link scrollto" href="#">Rumah Sakit</a></li>
@@ -67,12 +67,71 @@
 
   </section><!-- End Hero -->
 
+
+  <!-- Main Section -->
   <main id="main"> 
-    <div class="col-xl-9 col-lg-8 col-md-12 col-12">
-     <div id="earningTwo" class="apex-charts"></div>
-    </div>
-    Tes Github
-  </main><!-- End #main -->
+
+    <!-- Input Data Bayi Section -->
+    <section id="databayi">
+      
+    </section>
+    
+    <!-- End Input Data Bayi Section -->
+
+    <!-- Artikel Section -->
+    <section id="artikel">
+      <div class="section-title">
+          <h2 class="">Artikel</h2>
+          <div class="container-fluid">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Cari Artikel" aria-label="Search">
+              <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+          </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+          <img src="assets/img/artikel1.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Lorem Ipsum</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+            <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+            <a href="" class="btn btn-outline-danger btn-sm"><i class="bi-heart"></i></a>
+          </div>
+        </div>
+        </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="assets/img/artikel2.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Lorem Ipsum</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+            <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+            <a href="" class="btn btn-outline-danger btn-sm"><i class="bi-heart"></i></a>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card">
+            <img src="assets/img/artikel3.jpeg" alt="" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Lorem Ipsum</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+              <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+              <a href="" class="btn btn-outline-danger btn-sm"><i class="bi-heart"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- End Artikel Section -->
+
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
