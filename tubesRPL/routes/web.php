@@ -30,6 +30,9 @@ Route::get('/login1', [AuthController::class,"loginView1"]);
 Route::get('/parentView', [AuthController::class,"parentView"]);
 Route::get('/forumView', [AuthController::class,"forumView"]);
 Route::get('/articleView', [AuthController::class,"articleView"]);
+Route::get('/hospitalView', [AuthController::class,"hospitalView"]);
+Route::get('/notesView', [AuthController::class,"notesView"]);
+
 
 
 
