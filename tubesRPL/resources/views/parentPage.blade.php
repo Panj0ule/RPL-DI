@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <!-- Vendor CSS Files -->
   <link href="" rel="stylesheet">
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -30,28 +30,8 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  header-transparent ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <h1><a href="/parentView">BUNA</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="#">Notifikasi</a></li>
-          <li><a class="nav-link scrollto" href="/notesView">Notes</a></li>
-          <li><a class="nav-link scrollto" href="/forumView">Forum</a></li>
-          <li><a class="nav-link scrollto" href="/articleView">Informasi</a></li>
-          <li><a class="nav-link scrollto" href="#">Rumah Sakit</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
+  @include('partials.navbar')
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -69,13 +49,13 @@
 
 
   <!-- Main Section -->
-  <main id="main"> 
+  <main id="main">
 
     <!-- Input Data Bayi Section -->
     <section id="databayi">
-      
+
     </section>
-    
+
     <!-- End Input Data Bayi Section -->
 
     <!-- Artikel Section -->

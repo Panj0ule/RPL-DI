@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <!-- Vendor CSS Files -->
   <link href="" rel="stylesheet">
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -30,28 +30,8 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top  header-transparent ">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <h1><a href="/parentView">BUNA</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto" href="#">Notifikasi</a></li>
-          <li><a class="nav-link scrollto" href="#">Notes</a></li>
-          <li><a class="nav-link scrollto active" href="/forumView">Forum</a></li>
-          <li><a class="nav-link scrollto" href="/articleView">Informasi</a></li>
-          <li><a class="nav-link scrollto" href="#">Rumah Sakit</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
+  @include('partials.navbar')
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -67,7 +47,7 @@
 
   </section><!-- End Hero -->
 
-  <main id="main"> 
+  <main id="main">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <div class="container">
     <div class="main-body p-0">
@@ -374,53 +354,8 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>BUNA</h3>
-            <p>
-              <strong>OUR TEAM</strong> <br>
-              Adinda Putri Rosyadi<br>
-              Anak Agung Istri Arinta Maharani <br>
-              Dhialif Fajarrahman<br>
-              Nia Madu Marliana<br>
-              Rafi Rizkya Aryanta<br><br>
-              <strong>Kelas:</strong> IF-43-08<br>
-              <strong>Asisten Praktikum:</strong> Billy Anthony Christian M.<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#features">Notes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/forumView">Forum</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/articleView">Informasi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#details">Rumah Sakit</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
+  @include('partials.footer')
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
