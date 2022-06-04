@@ -25,11 +25,11 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/styleNotes.css') }}" rel="stylesheet">
 
-
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
-  
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top  header-transparent ">
