@@ -24,12 +24,11 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/styleNotes.css') }}" rel="stylesheet">
-
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-
 
   <!-- ======= Header ======= -->
   @include('partials.navbar')
@@ -416,9 +415,7 @@
               <div class="modal-content border-0">
                   <div class="modal-header bg-info text-white">
                       <h5 class="modal-title text-white">Add Notes</h5>
-                      <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
+                      <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                       <div class="notes-box">

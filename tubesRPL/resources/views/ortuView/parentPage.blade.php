@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  
   <!-- Vendor CSS Files -->
   <link href="" rel="stylesheet">
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -24,7 +24,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/style1.css') }}" rel="stylesheet">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -40,7 +41,13 @@
       <div class="row">
           <div>
               <br><br><br>
-            <h2 class="titleUser">Hello, <span class="Buna">...</span>!</h2>
+            <h2 class="titleUser">Hello, <span class="Buna">
+                    @if(\Auth::check())
+                      <a class="namaUser">{{\Auth::user()->name}}</a>
+                    @else
+                      <a class='error' style="margin-right: 10px"> You are not logged in  </a>
+                    @endif
+            </span>!</h2>
           </div>
       </div>
     </div>
@@ -49,13 +56,53 @@
 
 
   <!-- Main Section -->
-  <main id="main">
+  <main id="main"> 
 
     <!-- Input Data Bayi Section -->
     <section id="databayi">
+      <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+          <div style="height:200px; width: 200px; margin:auto">
+        <canvas id="barChart">
 
+        </canvas>
+        </div>
+      
+        <script>
+          $(function(){
+            var barCanvas = $("#barChart");
+            var barChart = new Chart(barCanvas,{
+              type:'bar',
+              data:{
+                labels:['Jan','Feb','Mar','Apr','Mei','Jun','Jul']
+                datasets:[
+                  {
+                    label: 'Pertumbuhan Balita',
+                    backgroundColor:['red','orange','yellow','green','blue','indigo','violet']
+                  }
+                ]
+              },
+              options:{
+                scales:{
+                  yAxes:[{
+                    ticks:{
+                      beginAtZero:true
+                    }
+                  }]
+                }
+              }
+            });
+          })
+        </script>
+          </div>
+          <div class="col-md-4" data-aos="fade-up">
+          <div class="square rounded p-3 bg-light">Detail Data Bayi</div>
+            <a href="/parentView/addDataBayi" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Tambah Data Bayi</a>
+          </div>
+        </div>
+      </div>
     </section>
-
+    
     <!-- End Input Data Bayi Section -->
 
     <!-- Artikel Section -->
@@ -65,7 +112,7 @@
           <div class="container-fluid">
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Cari Artikel" aria-label="Search">
-              <button class="btn btn-outline-secondary" type="submit">Search</button>
+              <button class="btn btn-outline-danger" type="submit">Search</button>
             </form>
           </div>
       </div>
@@ -114,53 +161,8 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>BUNA</h3>
-            <p>
-              <strong>OUR TEAM</strong> <br>
-              Adinda Putri Rosyadi<br>
-              Anak Agung Istri Arinta Maharani <br>
-              Dhialif Fajarrahman<br>
-              Nia Madu Marliana<br>
-              Rafi Rizkya Aryanta<br><br>
-              <strong>Kelas:</strong> IF-43-08<br>
-              <strong>Asisten Praktikum:</strong> Billy Anthony Christian M.<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#features">Notes</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/forumView">Forum</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="/articleView">Informasi</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#details">Rumah Sakit</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
+  @include('partials.footer')
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

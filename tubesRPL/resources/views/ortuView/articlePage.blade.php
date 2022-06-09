@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  
   <!-- Vendor CSS Files -->
   <link href="" rel="stylesheet">
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -31,6 +31,7 @@
 
   <!-- ======= Header ======= -->
   @include('partials.navbar')
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
@@ -39,22 +40,67 @@
       <div class="row">
           <div>
               <br><br><br>
-            <h2 class="titleUser">Hello, <span class="Buna">...</span>!</h2>
+            <h2 class="titleUser">Artikel</h2>
           </div>
       </div>
     </div>
 
   </section><!-- End Hero -->
 
-  <main id="main">
-
+  <main id="main"> 
+  
   Konten Article masih nyari
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  @include('partials.footer')
-  <!-- End Footer -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>BUNA</h3>
+            <p>
+              <strong>OUR TEAM</strong> <br>
+              Adinda Putri Rosyadi<br>
+              Anak Agung Istri Arinta Maharani <br>
+              Dhialif Fajarrahman<br>
+              Nia Madu Marliana<br>
+              Rafi Rizkya Aryanta<br><br>
+              <strong>Kelas:</strong> IF-43-08<br>
+              <strong>Asisten Praktikum:</strong> Billy Anthony Christian M.<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#features">Notes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/forumView">Forum</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/articleView">Informasi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#details">Rumah Sakit</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

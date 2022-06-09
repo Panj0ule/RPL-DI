@@ -10,11 +10,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="#">Notifikasi</a></li>
-          <li><a class="nav-link scrollto" href="/notesView">Notes</a></li>
-          <li><a class="nav-link scrollto" href="/forumView">Forum</a></li>
-          <li><a class="nav-link scrollto" href="/articleView">Artikel</a></li>
-          <li><a class="nav-link scrollto" href="/hospitalView">Rumah Sakit</a></li>
+          <li><a class="nav-link scrollto" href="/forumView">Konsultasi</a></li>
+          <li><a class="nav-link scrollto" href="/articleView">Article</a></li>
+          <li><a class="nav-link scrollto" href="/hospitalView">Jadwal</a></li>
           <li><a class="nav-link scrollto" href="/ortuProfView">
             <i class="bi bi-person-circle" class=""></i></a></li>
         </ul>
