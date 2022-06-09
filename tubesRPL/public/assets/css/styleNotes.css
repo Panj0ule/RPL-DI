@@ -130,7 +130,7 @@ body {
     margin-left: 5px;
   }
   .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-    color: #4E4E4E;
+    color: #EA346A;
   }
   .navbar .getstarted, .navbar .getstarted:focus {
     background: #EA346A;

@@ -26,27 +26,42 @@ class AuthController extends Controller
 
     function parentView()
     {
-        return view("parentPage");
+        return view("ortuView.parentPage");
     }
 
     function forumView()
     {
-        return view("forumPage");
+        return view("ortuView.forumPage");
     }
 
     function articleView()
     {
-        return view("articlePage");
+        return view("ortuView.articlePage");
     }
 
     function hospitalView()
     {
-        return view("mapPage");
+        return view("ortuView.mapPage");
     }
 
     function notesView()
     {
-        return view("notesPage");
+        return view("ortuView.notesPage");
+    }
+
+    function ortuProfView()
+    {
+        return view("ortuView.profOrtu");
+    }
+
+    function addDataBayi()
+    {
+        return view("ortuView.addData");
+    }
+
+    function listDokView()
+    {
+        return view("ortuView.listDok");
     }
 
     function doLogin(Request $request)

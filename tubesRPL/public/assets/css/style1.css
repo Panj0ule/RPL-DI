@@ -22,6 +22,9 @@ h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
 
+label{
+  font-weight: 600;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -130,7 +133,7 @@ h2, h3, h4, h5, h6 {
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #4E4E4E;
+  color: #EA346A;
 }
 .navbar .getstarted, .navbar .getstarted:focus {
   background: #EA346A;
@@ -144,6 +147,10 @@ h2, h3, h4, h5, h6 {
 .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
   background: #748ec6;
   color: #fff;
+}
+
+#header .bi .bi-person-circle {
+  font-size: 20px;
 }
 
 
@@ -243,7 +250,16 @@ h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 .titleUser{
-  text-align: center;
+  text-align: Center;
+  font-weight: 700;
+}
+
+#hero .titleUser .namaUser{
+  color: #585a61;
+}
+
+.titlePage{
+  text-align: left;
   font-weight: 700;
 }
 
@@ -276,45 +292,6 @@ section {
 }
 
 /*--------------------------------------------------------------
-# App Features
---------------------------------------------------------------*/
-.features .content {
-  padding: 30px 0;
-}
-.features .content .icon-box {
-  margin-top: 25px;
-}
-.features .content .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 5px 0 10px 60px;
-}
-.features .content .icon-box i {
-  font-size: 48px;
-  float: left;
-  color: #EA346A;
-}
-.features .content .icon-box p {
-  font-size: 15px;
-  color: #979aa1;
-  margin-left: 60px;
-}
-@media (max-width: 991px) {
-  .features .image {
-    text-align: center;
-  }
-  .features .image img {
-    max-width: 80%;
-  }
-}
-@media (max-width: 667px) {
-  .features .image img {
-    max-width: 100%;
-  }
-}
-
-
-/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
@@ -323,52 +300,6 @@ section {
   color: #47536e;
   font-size: 14px;
   background: #eff2f8;
-}
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: #eff2f8;
-  text-align: center;
-  font-size: 15px;
-}
-#footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
-  color: #47536e;
-}
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-#footer .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-#footer .footer-newsletter form input[type=submit] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: #5777ba;
-  color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #415f9d;
 }
 #footer .footer-top {
   padding: 60px 0 30px 0;
@@ -475,6 +406,10 @@ section {
   }
 }
 
+
+/*--------------------------------------------------------------
+# Forum Page
+--------------------------------------------------------------*/
 .inner-wrapper {
   position: relative;
   height: calc(100vh - 3.5rem);
@@ -595,4 +530,9 @@ section {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1rem;
+}
+
+
+.hosCon{
+  background-color: #eeee;
 }
