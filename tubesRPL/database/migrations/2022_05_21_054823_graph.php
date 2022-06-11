@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tab_graph', function (Blueprint $table) {
-            $table->integer('id_balita');
+            $table->id('id');
+            $table->integer('id_balita')->references('id')->on('tab_balita')->onDelete('cascade');
             $table->integer('berat_balita');
             $table->integer('tinggi_balita');
             $table->date('waktu');

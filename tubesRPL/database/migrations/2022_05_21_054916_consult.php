@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tab_consult', function (Blueprint $table) {
-            $table->id('id_consult');
-            $table->integer('id_parent');
-            $table->integer('id_dokter');
-            $table->integer('id_balita');
+            $table->id('id');
+            $table->integer('id_parent')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('id_dokter')->references('id')->on('users')->onDelete('cascade');
             $table->text('message_consult');
             $table->timestamps();
         });

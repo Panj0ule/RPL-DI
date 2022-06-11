@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tab_jadwal', function (Blueprint $table) {
-            $table->id('id_jadwal');
-            $table->integer('id_rs');
-            $table->integer('id_dokter');
+            $table->id('id');
+            $table->integer('id_rs')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('id_dokter')->references('id')->on('users')->onDelete('cascade');
             $table->date('tanggal');
             $table->string('jam');
             $table->timestamps();

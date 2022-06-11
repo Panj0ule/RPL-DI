@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tab_repliess', function (Blueprint $table) {
-            $table->id('id_replies');
+        Schema::create('tab_replies', function (Blueprint $table) {
+            $table->id('id');
             $table->text('isi_replies');
-            $table->integer('id_parent');
-            $table->integer('id_forum');
+            $table->integer('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('id_forum')->references('id')->on('tab_forum')->onDelete('cascade');
             $table->timestamps();
         });
     }

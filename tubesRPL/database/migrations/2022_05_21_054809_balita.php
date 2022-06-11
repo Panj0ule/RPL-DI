@@ -14,14 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tab_balita', function (Blueprint $table) {
-            $table->id('id_balita');
+            $table->id('id');
             $table->string('nama_balita');
             $table->integer('umur_balita');
             $table->integer('berat_balita');
             $table->integer('tinggi_balita');
             $table->string('jenis_kelamin');
-            $table->integer('id_parent');
-            $table->integer('id_graph');
+            $table->integer('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('id_graph')->references('id')->on('tab_graph')->onDelete('cascade');
             $table->text('profpic_balita');
             $table->timestamps();
         });

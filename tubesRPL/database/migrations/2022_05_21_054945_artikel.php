@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tab_artikel', function (Blueprint $table) {
-            $table->id('id_artikel');
+            $table->id('id');
             $table->string('article_creator');
             $table->string('article_title');
             $table->text('article_content');
             $table->date('article_date');
-            $table->integer('id_dokter');
+            $table->integer('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

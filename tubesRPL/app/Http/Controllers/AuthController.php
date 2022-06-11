@@ -89,8 +89,9 @@ class AuthController extends Controller
     function doRegister(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
             'email' => 'required|email|unique:users,email',   // required and email format validation
+            'name' => 'required',
+            // 'username' => 'required',
             'password' => 'required|min:8', // required and number field validation
             'confirm_password' => 'required|same:password',
 
@@ -103,8 +104,10 @@ class AuthController extends Controller
         } else {
             //validations are passed, save new user in database
             $User = new User;
-            $User->name = $request->name;
             $User->email = $request->email;
+            $User->name = $request->name;
+            // $User->username = $request->username;
+            // $User->phonenumb = $request->phonenumb;
             $User->password = bcrypt($request->password);
             $User->save();
             
