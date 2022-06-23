@@ -41,12 +41,18 @@ Route::get('/forumView', [AuthController::class,"forumView"]);
 Route::get('/articleView', [AuthController::class,"articleView"]);
 Route::get('/hospitalView', [AuthController::class,"hospitalView"]);
 Route::get('/hospitalView/listDokter', [AuthController::class,"listDokView"]);
-Route::get('/notesView', [AuthController::class,"notesView"]);
+/* Route::get('/notesView', [AuthController::class,"notesView"]); */
 Route::get('/ortuProfView', [AuthController::class,"ortuProfView"]);
 
 Route::get('/parentView', [ortuController::class,"parentView"]);
+//ADD BALITA
 Route::get('/parentView/addDataBayi', [ortuController::class,"formDataBayi"]);
-Route::post('/parentView/storeDataBayi', [ortuController::class,"store"]);
+Route::post('/parentView/storeDataBayi', [ortuController::class,"addBayi"]);
+//ADD NOTES
+Route::get('/notesView', [ortuController::class,"notesView"]);
+Route::post('/notesAdd', [ortuController::class,"notesAdd"]);
+Route::get('/notesDelete/{id}', [ortuController::class,"notesDelete"]);
+
 // DOCTOR
 
 Route::get('/docProfView', [DocController::class,"profView"]);

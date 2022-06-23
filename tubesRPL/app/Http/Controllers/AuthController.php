@@ -47,10 +47,10 @@ class AuthController extends Controller
         return view("ortuView.mapPage");
     }
 
-    function notesView()
+/*     function notesView()
     {
         return view("ortuView.notesPage");
-    }
+    } */
 
     function ortuProfView()
     {

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Carbon\Carbon;
+use App\Models\Notes;
 use App\Models\Balita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Carbon\Carbon;
 
 class ortuController extends Controller
 {
@@ -20,7 +21,7 @@ class ortuController extends Controller
         return view("ortuView.addData");
     }
 
-    function store(Request $request)
+    function addBayi(Request $request)
     {
         $balita = new Balita;
         $balita -> nama_balita = $request->nama_balita;
@@ -32,5 +33,24 @@ class ortuController extends Controller
         $balita -> id_user = Auth::user()->id;
         $balita->save();
         return redirect("/parentView")->with('status', 'Balita Data Has Been inserted');
+    }
+
+    function notesView()
+    {
+        return view("ortuView.notesPage",[
+            "notes" => Notes::all(),
+        ]);
+    }
+
+    function notesAdd(Request $request)
+    {
+        $note = new Notes;
+        $note -> title = $request->title;
+        $note -> desc = $request->desc;
+        $note -> category = $request->category;
+        $note -> tgl_note = Carbon::now();
+        $note -> id_user = Auth::user()->id;
+        $note->save();
+        return redirect("/notesView")->with('status', 'Notes Berhasil ditambahkan');
     }
 }

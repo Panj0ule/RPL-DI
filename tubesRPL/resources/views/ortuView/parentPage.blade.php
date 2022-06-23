@@ -99,10 +99,12 @@
           <div class="square rounded p-3 bg-light">
                 <h5>Detail Data Bayi</h5>
                 @foreach ($balitas as $balita)
-                    <h6>Nama Balita: {{ $balita->nama_balita }}</h6>
-                    <h6>Jenis Kelamin: {{ $balita->jenis_kelamin }}</h6>
-                    <h6>Tanggal Lahir: {{ $balita->tgl_lahir }}, umur: {{ $balita->umur_balita }}</h6>
-                    <br>
+                    @if ($balita->id_user == Auth::user()->id)
+                        <h6>Nama Balita: {{ $balita->nama_balita }}</h6>
+                        <h6>Jenis Kelamin: {{ $balita->jenis_kelamin }}</h6>
+                        <h6>Tanggal Lahir: {{ $balita->tgl_lahir }}, umur: {{ $balita->umur_balita }}</h6>
+                        <br>
+                    @endif
                 @endforeach
           </div>
             <a href="/parentView/addDataBayi" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Tambah Data Bayi</a>
