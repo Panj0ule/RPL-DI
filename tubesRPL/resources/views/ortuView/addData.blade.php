@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <!-- Vendor CSS Files -->
   <link href="" rel="stylesheet">
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -27,7 +27,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -50,59 +50,48 @@
 
 
   <!-- Main Section -->
-  <main id="main"> 
+  <main id="main">
     <div class="mt-4 ms-4">
        <div class="container">
             <div class="form-group">
-            <form action="/dashboard/restaurant/store" method="post">
+            <form action="/parentView/storeDataBayi" method="post">
                 {{ csrf_field() }}
                 <div class="form-field col-lg-4">
-                    <label for="namaBayi">Nama Bayi</label> <input type="text" name="namaBayi" id="namaBayi" required="required" class="form-control">
+                    <label for="nama_balita">Nama Bayi</label> <input type="text" name="nama_balita" id="nama_balita" required="required" class="form-control">
                     <br><br>
                 </div>
-                <label for="jKelamin">Jenis Kelamin</label><br>
+                <label for="jenis_kelamin">Jenis Kelamin</label><br>
                     <div class="form-check form-check-inline">
-                        <label class="form-check-label" for="radioP">Perempuan</label>
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioP" value="Perempuan">
+                        <label class="form-check-label" for="jenis_kelamin">Perempuan</label>
+                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin" value="Perempuan">
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioP" value="Laki">
-                        <label class="form-check-label" for="radioP">Laki-Laki</label>
+                        <input class="form-check-input" type="radio" name="jenis_kelamin" id="jenis_kelamin" value="Laki">
+                        <label class="form-check-label" for="jenis_kelamin">Laki-Laki</label>
                     </div>
                 <br><br>
                 <div class="form-field col-lg-4">
-                    <label for="tglLahir">Tanggal Lahir</label> 
-                    <input type="date" class="form-control" id="tgllahir" name="tgllahir">
+                    <label for="tgl_lahir">Tanggal Lahir</label>
+                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir">
                     <br><br>
                 </div>
                 <div class="contact-form row">
                     <div class="form-field col-lg-2">
                         <label class="form-control-label px-3">Tinggi Badan
                             <span class="text-danger"> *</span>
-                        </label> 
-                        <input type="text" class="form-control" id="tBadan" name="tBadan"> 
+                        </label>
+                        <input type="text" class="form-control" id="tinggi_balita" name="tinggi_balita">
                     </div>
                     <div class="form-field col-lg-2">
                         <label class="form-control-label px-3">Berat Badan
                             <span class="text-danger"> *</span>
-                        </label> 
-                        <input type="text" class="form-control" id="bBadan" name="bBadan"> 
-                    </div>
-                </div>
-                <br><br>
-                <div class="contact-form row">
-                    <div class="form-field col-lg-2">
-                        <label class="form-control-label px-3">Lingkar Kepala</label> 
-                        <input type="text" class="form-control" id="tBadan" name="tBadan"> 
-                    </div>
-                    <div class="form-field col-lg-2">
-                        <label class="form-control-label px-3">Lingkar Lengan</label> 
-                        <input type="text" class="form-control" id="bBadan" name="bBadan"> 
+                        </label>
+                        <input type="text" class="form-control" id="berat_balita" name="berat_balita">
                     </div>
                 </div>
                 <br><br>
                 <input type="submit" value="Simpan Data" class="btn btn-danger">
-        
+
             </form>
             </div>
         </div>

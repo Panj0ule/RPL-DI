@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChartJSController;
 use App\Http\Controllers\DocController;
+use App\Http\Controllers\ortuController;
 use App\Http\Controllers\RsController;
 
 
@@ -34,8 +35,8 @@ Route::post('/do-login', [AuthController::class,"doLogin"]);
 Route::post('/do-register', [AuthController::class,"doRegister"]);
 Route::get('/logout', [AuthController::class,"logout"]);
 Route::get('/login1', [AuthController::class,"loginView1"]);
-Route::get('/parentView', [AuthController::class,"parentView"]);
-Route::get('/parentView/addDataBayi', [AuthController::class,"addDataBayi"]);
+/* Route::get('/parentView', [AuthController::class,"parentView"]); */
+//Route::get('/parentView/addDataBayi', [AuthController::class,"addDataBayi"]);
 Route::get('/forumView', [AuthController::class,"forumView"]);
 Route::get('/articleView', [AuthController::class,"articleView"]);
 Route::get('/hospitalView', [AuthController::class,"hospitalView"]);
@@ -43,9 +44,10 @@ Route::get('/hospitalView/listDokter', [AuthController::class,"listDokView"]);
 Route::get('/notesView', [AuthController::class,"notesView"]);
 Route::get('/ortuProfView', [AuthController::class,"ortuProfView"]);
 
-
-
-// DOCTOR 
+Route::get('/parentView', [ortuController::class,"parentView"]);
+Route::get('/parentView/addDataBayi', [ortuController::class,"formDataBayi"]);
+Route::post('/parentView/storeDataBayi', [ortuController::class,"store"]);
+// DOCTOR
 
 Route::get('/docProfView', [DocController::class,"profView"]);
 Route::get('/homeDoc', [DocController::class,"index"]);

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use App\Models\Balita;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -24,10 +25,12 @@ class AuthController extends Controller
         return view("register");
     }
 
-    function parentView()
+ /*    function parentView()
     {
-        return view("ortuView.parentPage");
-    }
+        return view("ortuView.parentPage",[
+            "balita" => Balita::all(),
+        ]);
+    } */
 
     function forumView()
     {
@@ -73,7 +76,7 @@ class AuthController extends Controller
         ]); // create the validations
         if ($validator->fails())   //check all validations are fine, if not then redirect and show error messages
         {
-            return response()->json($validator->errors(),422);  
+            return response()->json($validator->errors(),422);
             // validation failed return with 422 status
 
         } else {
@@ -98,7 +101,7 @@ class AuthController extends Controller
         ]); // create the validations
         if ($validator->fails())   //check all validations are fine, if not then redirect and show error messages
         {
-            return response()->json($validator->errors(),422);  
+            return response()->json($validator->errors(),422);
             // validation failed return back to form
 
         } else {
@@ -110,9 +113,9 @@ class AuthController extends Controller
             // $User->phonenumb = $request->phonenumb;
             $User->password = bcrypt($request->password);
             $User->save();
-            
-            return response()->json(["status"=>true,"msg"=>"You have successfully registered, Login to access your dashboard","redirect_location"=>url("login")]);  
-           
+
+            return response()->json(["status"=>true,"msg"=>"You have successfully registered, Login to access your dashboard","redirect_location"=>url("login")]);
+
         }
     }
 

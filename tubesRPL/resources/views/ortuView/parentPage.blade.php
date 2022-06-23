@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <!-- Vendor CSS Files -->
   <link href="" rel="stylesheet">
   <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -56,7 +56,7 @@
 
 
   <!-- Main Section -->
-  <main id="main"> 
+  <main id="main">
 
     <!-- Input Data Bayi Section -->
     <section id="databayi">
@@ -67,7 +67,7 @@
 
         </canvas>
         </div>
-      
+
         <script>
           $(function(){
             var barCanvas = $("#barChart");
@@ -96,13 +96,21 @@
         </script>
           </div>
           <div class="col-md-4" data-aos="fade-up">
-          <div class="square rounded p-3 bg-light">Detail Data Bayi</div>
+          <div class="square rounded p-3 bg-light">
+                <h5>Detail Data Bayi</h5>
+                @foreach ($balitas as $balita)
+                    <h6>Nama Balita: {{ $balita->nama_balita }}</h6>
+                    <h6>Jenis Kelamin: {{ $balita->jenis_kelamin }}</h6>
+                    <h6>Tanggal Lahir: {{ $balita->tgl_lahir }}, umur: {{ $balita->umur_balita }}</h6>
+                    <br>
+                @endforeach
+          </div>
             <a href="/parentView/addDataBayi" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Tambah Data Bayi</a>
           </div>
         </div>
       </div>
     </section>
-    
+
     <!-- End Input Data Bayi Section -->
 
     <!-- Artikel Section -->

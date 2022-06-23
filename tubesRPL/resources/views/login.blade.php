@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head> 
+  <head>
     <title>Login Page</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;@600&display=swap" rel="stylesheet">
-  
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
-    
+
     <style>
       .error {
         color: red
@@ -68,7 +68,7 @@
       <form method="post" id="handleAjax" action="{{url('do-login')}}" name="postform">
         @csrf
         <div class="form-group">
-          <input type="text" name="email" value="{{old('email')}}" class="form-control" placeholder="Enter email or username" required/>
+          <input type="text" name="email" value="{{old('email')}}" class="form-control" placeholder="Enter email" required/>
         </div>
         <div class="form-group">
           <input type="password" name="password" class="form-control" placeholder="password" required/>
@@ -81,7 +81,7 @@
         </div>
       </form>
     </div>
-    
+
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
@@ -98,11 +98,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css" rel="stylesheet"/>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"></script>
-    
+
     <style>
       .error {
         color: red
@@ -173,7 +173,7 @@
                     </button>
                   @else
                     <a class='error' style="margin-right: 10px"> You are not logged in  </a>
-                    
+
                     <button type="button" class="btn btn-link px-3 me-2">
                       <a href="{{url('login')}}">Login</a>
                     </button>
@@ -223,7 +223,7 @@
       </div>
 
       <hr class="my-5" />
-      
+
     </main>
   <!--Main layout-->
 
