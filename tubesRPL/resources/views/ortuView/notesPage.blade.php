@@ -269,59 +269,33 @@
             <div class="modal fade" id="addnotesmodal" tabindex="-1" role="dialog" aria-labelledby="addnotesmodalTitle" style="display: none;" aria-hidden="true">
                 <form action="/notesAdd" method="post">
                     {{ csrf_field() }}
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content border-0">
-                            <div class="modal-header bg-info text-white">
-                                <h5 class="modal-title text-white">Add Notes</h5>
-                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                            </div>
-
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalNotesTitle">Add Notes</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                         <div class="modal-body">
-                            <div class="notes-box">
-                                <div class="notes-content">
-                                    <div class="row">
-                                        <div class="col-md-12 mb-3">
-                                            <div class="note-title">
-                                                <label>Note Title</label>
-                                                <input type="text" name="title" id="title" required="required" placeholder="title" class="form-control">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="note-description ">
-                                                <label>Note Description</label>
-                                                <textarea id="desc" name="desc" class="form-control" placeholder="Description" rows="3"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="note-category" required="required">
-                                                <label for="category">Category</label><br>
-                                                <div class="form-check form-check-inline">
-                                                    <label class="form-check-label" for="category">Business</label>
-                                                    <input class="form-check-input" type="radio" name="category" id="category" value="Business">
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="category" id="category" value="Social">
-                                                    <label class="form-check-label" for="category">Social</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="category" id="category" value="Important">
-                                                    <label class="form-check-label" for="category">Important</label>
-                                                </div>
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="category" id="category" value="Other">
-                                                    <label class="form-check-label" for="category">Other</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <form>
+                            <div class="mb-3">
+                                <div class="note-title">
+                                    <label>Note Title</label>
+                                    <input type="text" class="form-control" name="title" id="title" required="required" placeholder="title">
                                 </div>
                             </div>
-                        </div>
-                            <div class="modal-footer">
-                                <button id="btn-n-save" class="float-left btn btn-success" style="display: none;">Save</button>
-                                <button class="btn btn-danger" data-dismiss="modal">Discard</button>
-                                <input type="submit" value="Add" class="btn btn-info">
+                            <div class="mb-3">
+                            <div class="note-description">
+                                <label>Note Description</label>
+                                <textarea class="form-control" id="desc" name="desc" placeholder="Description" rows="3"></textarea>
+                                </div>
                             </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btn-n-save" class="float-left btn btn-success" style="display: none;">Save</button>
+                            <button class="btn btn-danger" data-bs-dismiss="modal">Discard</button>
+                            <input type="submit" value="Add" class="btn btn-info">
+                        </div>
                         </div>
                     </div>
                 </form>

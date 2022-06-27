@@ -52,7 +52,7 @@
             <div class="col-lg-4">
                 <div class="card mb-4">
                 <div class="card-body text-center">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                    <img src="/assets/img/user.png" alt="avatar"
                     class="rounded-circle img-fluid" style="width: 150px;">
                     <h5 class="my-3">
                         @if(\Auth::check())
@@ -61,7 +61,6 @@
                             <a class='error' style="margin-right: 10px"> You are not logged in  </a>
                         @endif
                     </h5>
-                    <p class="text-muted mb-4">[Harusnya Alamat Ortu]</p>
                     <div class="d-flex justify-content-center mb-2">
                     <button type="button" class="btn btn-outline-primary ms-1">Edit Profile</button>
                     </div>
@@ -103,28 +102,46 @@
                     <hr>
                     <div class="row">
                     <div class="col-sm-3">
+                        <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">
+                            @if(\Auth::check())
+                                <a class="namaUser">{{\Auth::user()->email}}</a>
+                            @else
+                                <a class='error' style="margin-right: 10px"> You are not logged in  </a>
+                            @endif
+                        </p>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
+                        <p class="mb-0">Username</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">
+                            @if(\Auth::check())
+                                <a class="namaUser">{{\Auth::user()->username}}</a>
+                            @else
+                                <a class='error' style="margin-right: 10px"> You are not logged in  </a>
+                            @endif
+                        </p>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                    <div class="col-sm-3">
                         <p class="mb-0">Phone</p>
                     </div>
                     <div class="col-sm-9">
-                        <p class="text-muted mb-0">(097) 234-5678</p>
-                    </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                    <div class="col-sm-3">
-                        <p class="mb-0">Mobile</p>
-                    </div>
-                    <div class="col-sm-9">
-                        <p class="text-muted mb-0">(098) 765-4321</p>
-                    </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                    <div class="col-sm-3">
-                        <p class="mb-0">Address</p>
-                    </div>
-                    <div class="col-sm-9">
-                        <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                        <p class="text-muted mb-0">
+                            @if(\Auth::check())
+                                <a class="namaUser">{{\Auth::user()->phonenumb}}</a>
+                            @else
+                                <a class='error' style="margin-right: 10px"> You are not logged in  </a>
+                            @endif
+                        </p>
                     </div>
                     </div>
                 </div>

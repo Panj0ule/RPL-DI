@@ -35,6 +35,14 @@ class ortuController extends Controller
         return redirect("/parentView")->with('status', 'Balita Data Has Been inserted');
     }
 
+    function deleteBayi($id_balita) {
+        // menghapus data bayi sesuai dengan id yang dipilih
+        DB::table('balitas')->where('id_balita', $id_balita)->delete();
+
+        // redirect ke parentView
+        return redirect('/parentView')-> with('status', "Data Balita berhasil dihapus");
+    }
+
     function notesView()
     {
         return view("ortuView.notesPage",[
@@ -52,5 +60,13 @@ class ortuController extends Controller
         $note -> id_user = Auth::user()->id;
         $note->save();
         return redirect("/notesView")->with('status', 'Notes Berhasil ditambahkan');
+    }
+
+    function notesDelete($id_note) {
+        // menghapus data restoran sesuai dengan id yang dipilih
+        DB::table('notes')->where('id_note', $id_note)->delete();
+
+        // redirect ke dashboard resto
+        return redirect('/notesView')-> with('status', "Note berhasil dihapus");
     }
 }

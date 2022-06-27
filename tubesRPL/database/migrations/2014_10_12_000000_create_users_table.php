@@ -17,13 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('email')->unique();
             $table->string('name');
-            // $table->string('username');
-            // $table->string('phonenumb');
+            $table->string('username');
+            $table->string('phonenumb');
             $table->string('password');
             // $table->string('alamat');
             // $table->string('koordinat');
             // $table->string('profpic');
-            // $table->string('role');
+            $table->string('role');
             // $table->string('spesialis');
             // $table->integer('id_forum')->references('id')->on('tab_forum')->onDelete('cascade');
             // $table->integer('id_replies')->references('id')->on('tab_replies')->onDelete('cascade');

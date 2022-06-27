@@ -96,19 +96,27 @@
         </script>
           </div>
           <div class="col-md-4" data-aos="fade-up">
-          <div class="square rounded p-3 bg-light">
-                <h5>Detail Data Bayi</h5>
-                @foreach ($balitas as $balita)
+            <div class="square rounded p-3 bg-light">
+                  <h5>Detail Data Bayi</h5>
+                  @foreach ($balitas as $balita)
                     @if ($balita->id_user == Auth::user()->id)
-                        <h6>Nama Balita: {{ $balita->nama_balita }}</h6>
-                        <h6>Jenis Kelamin: {{ $balita->jenis_kelamin }}</h6>
-                        <h6>Tanggal Lahir: {{ $balita->tgl_lahir }}, umur: {{ $balita->umur_balita }}</h6>
-                        <br>
+                    <div class="card" style="width: 18rem;">
+                      <div class="card-body">
+                              <h6 class="card-title">Nama Balita: {{ $balita->nama_balita }}</h6>
+                              <h6>Jenis Kelamin: {{ $balita->jenis_kelamin }}</h6>
+                              <h6>Tanggal Lahir: {{ $balita->tgl_lahir }}, umur: {{ $balita->umur_balita }}</h6>
+                              <br>
+                              <a href="#" class="btn btn-warning">Update</a>
+                              <a href="/deleteBayi/{{$balita->id_balita}}" class="btn btn-danger">Delete</a>
+                      </div>
+                    </div>
+                    <br>
                     @endif
-                @endforeach
-          </div>
-            <a href="/parentView/addDataBayi" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Tambah Data Bayi</a>
-          </div>
+                  @endforeach
+            </div>
+            <br>
+              <a href="/parentView/addDataBayi" class="btn btn-danger" tabindex="-1" role="button" aria-disabled="true">Tambah Data Bayi</a>
+            </div>
         </div>
       </div>
     </section>

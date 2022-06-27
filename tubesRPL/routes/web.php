@@ -48,9 +48,15 @@ Route::get('/parentView', [ortuController::class,"parentView"]);
 //ADD BALITA
 Route::get('/parentView/addDataBayi', [ortuController::class,"formDataBayi"]);
 Route::post('/parentView/storeDataBayi', [ortuController::class,"addBayi"]);
+
+//DELETE BALITA
+Route::get('/deleteBayi/{id}', [ortuController::class,"deleteBayi"]);
+
 //ADD NOTES
 Route::get('/notesView', [ortuController::class,"notesView"]);
 Route::post('/notesAdd', [ortuController::class,"notesAdd"]);
+
+//DELET NOTES
 Route::get('/notesDelete/{id}', [ortuController::class,"notesDelete"]);
 
 // DOCTOR

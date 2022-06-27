@@ -14,10 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('notes', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_note');
             $table->string('title');
             $table->string('desc');
-            $table->string('category');
             $table->date('tgl_note');
             $table->integer('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
